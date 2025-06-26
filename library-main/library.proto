@@ -1,0 +1,78 @@
+syntax = "proto3";
+
+package library;
+
+option go_package = "github.com/Go-CT-ITMO/library-yourname;library";
+
+service Library {
+  rpc AddBook(AddBookRequest) returns (AddBookResponse) {}
+  rpc UpdateBook(UpdateBookRequest) returns (UpdateBookResponse) {}
+
+  rpc GetBookInfo(GetBookInfoRequest) returns (GetBookInfoResponse) {}
+
+  rpc RegisterAuthor(RegisterAuthorRequest) returns (RegisterAuthorResponse) {}
+
+  rpc ChangeAuthorInfo(ChangeAuthorInfoRequest) returns (ChangeAuthorInfoResponse) {}
+
+  rpc GetAuthorInfo(GetAuthorInfoRequest) returns (GetAuthorInfoResponse) {}
+
+  rpc GetAuthorBooks(GetAuthorBooksRequest) returns (stream Book) {}
+}
+
+message Book {
+  string id = 1;
+  string name = 2;
+  repeated string author_id = 3;
+}
+
+message AddBookRequest {
+  string name = 1;
+  repeated string author_id = 2;
+}
+
+message AddBookResponse {
+  Book book = 1;
+}
+
+message UpdateBookRequest {
+  string id = 1;
+  string name = 2;
+}
+
+message UpdateBookResponse {}
+
+message GetBookInfoRequest {
+  string id = 1;
+}
+
+message GetBookInfoResponse {
+  Book book = 1;
+}
+
+message RegisterAuthorRequest {
+  string name = 1;
+}
+
+message RegisterAuthorResponse {
+  string id = 1;
+}
+
+message ChangeAuthorInfoRequest {
+  string id = 1;
+  string name = 2;
+}
+
+message ChangeAuthorInfoResponse {}
+
+message GetAuthorInfoRequest {
+  string id = 1;
+}
+
+message GetAuthorInfoResponse {
+  string id = 1;
+  string name = 2;
+}
+
+message GetAuthorBooksRequest {
+  string author_id = 1;
+}

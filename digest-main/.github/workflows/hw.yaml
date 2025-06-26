@@ -1,0 +1,37 @@
+name: Go СI
+
+on:
+  pull_request
+
+jobs:
+  workflow:
+    runs-on: self-hosted
+    timeout-minutes: 3
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Ensure branch is up-to-date with main
+        run: |
+          git fetch origin main
+          if git merge-base --is-ancestor origin/main @; then
+            echo 'Tests are already up-to-date'
+          else
+            echo 'Your tests have not been updated, try to rebase main' && exit 1
+          fi
+      - name: Setup go
+        uses: actions/setup-go@v5
+        with:
+          go-version: stable
+          cache-dependency-path: ./go.sum
+      - name: Dependencies
+        working-directory: ./
+        run: go mod tidy
+      - name: Linter
+        uses: golangci/golangci-lint-action@v6
+        with:
+          version: v1.61
+      - name: Tests
+        working-directory: ./
+        run: go test -v ./...
