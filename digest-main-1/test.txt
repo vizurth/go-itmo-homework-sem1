@@ -1,0 +1,378 @@
+echo 'Installing dependencies...'
+Installing dependencies...
+tmp=$(mktemp -d) && cd $tmp && pwd && go mod init temp && \
+	GOBIN=/Users/timuradiatullin/GolandProjects/go-itmo-homework-sem1/digest-main-1/bin go install github.com/golangci/golangci-lint/cmd/golangci-lint@v1.61.0 && \
+	GOBIN=/Users/timuradiatullin/GolandProjects/go-itmo-homework-sem1/digest-main-1/bin go install github.com/rakyll/gotest@v0.0.6 && \
+	rm -fr $tmp
+/var/folders/lv/88_9bw357132f7mrmkx8_2g40000gn/T/tmp.fbEwqSQQTd
+echo 'Running tests...'
+Running tests...
+/Users/timuradiatullin/GolandProjects/go-itmo-homework-sem1/digest-main-1/bin/gotest ""-race -v ./...""
+=== RUN   TestGetStringBySliceOfIndexesAlloc
+--- PASS: TestGetStringBySliceOfIndexesAlloc (2.26s)
+=== RUN   TestGetStringBySliceOfIndexesBenchmark
+--- PASS: TestGetStringBySliceOfIndexesBenchmark (2.62s)
+=== RUN   TestGetStringBySliceOfIndexesUnreachable
+=== PAUSE TestGetStringBySliceOfIndexesUnreachable
+=== RUN   TestGetStringBySliceOfIndexes
+=== PAUSE TestGetStringBySliceOfIndexes
+=== RUN   TestCharByIndexCopy
+--- PASS: TestCharByIndexCopy (1.50s)
+=== RUN   TestCharByIndexUnreachable
+=== PAUSE TestCharByIndexUnreachable
+=== RUN   TestGetCharByIndex
+=== PAUSE TestGetCharByIndex
+=== RUN   TestShiftPointer
+=== PAUSE TestShiftPointer
+=== RUN   TestSwapPointers
+=== PAUSE TestSwapPointers
+=== RUN   TestIsComplexEqual
+=== PAUSE TestIsComplexEqual
+=== RUN   TestGetRootsOfQuadraticEquation
+=== PAUSE TestGetRootsOfQuadraticEquation
+=== RUN   TestSort
+=== PAUSE TestSort
+=== RUN   TestSortPerformance
+=== RUN   TestSortPerformance/quicksort_left-pivot_antitest
+=== RUN   TestSortPerformance/quicksort_right-pivot_antitest
+=== RUN   TestSortPerformance/quicksort_middle-pivot_antitest
+=== RUN   TestSortPerformance/quicksort_left-middle-right-median-pivot_antitest
+--- PASS: TestSortPerformance (12.58s)
+    --- PASS: TestSortPerformance/quicksort_left-pivot_antitest (2.76s)
+    --- PASS: TestSortPerformance/quicksort_right-pivot_antitest (2.76s)
+    --- PASS: TestSortPerformance/quicksort_middle-pivot_antitest (3.93s)
+    --- PASS: TestSortPerformance/quicksort_left-middle-right-median-pivot_antitest (3.13s)
+=== RUN   TestReverseSliceOne
+=== PAUSE TestReverseSliceOne
+=== RUN   TestReverseSliceTwo
+=== PAUSE TestReverseSliceTwo
+=== RUN   TestIsSliceEqual
+=== PAUSE TestIsSliceEqual
+=== RUN   TestDeleteByIndex
+=== PAUSE TestDeleteByIndex
+=== CONT  TestGetStringBySliceOfIndexes
+=== CONT  TestReverseSliceOne
+=== RUN   TestGetStringBySliceOfIndexes/simple_get
+=== CONT  TestIsComplexEqual
+=== CONT  TestReverseSliceTwo
+=== CONT  TestDeleteByIndex
+=== CONT  TestIsSliceEqual
+=== CONT  TestShiftPointer
+=== RUN   TestReverseSliceOne/nil
+=== CONT  TestGetCharByIndex
+=== RUN   TestDeleteByIndex/simple_tests
+=== RUN   TestShiftPointer/simple_test
+=== RUN   TestGetCharByIndex/simple_get
+=== RUN   TestIsSliceEqual/nil_slices
+=== PAUSE TestShiftPointer/simple_test
+=== RUN   TestReverseSliceTwo/simple_tests
+=== PAUSE TestReverseSliceOne/nil
+=== PAUSE TestGetStringBySliceOfIndexes/simple_get
+=== PAUSE TestDeleteByIndex/simple_tests
+=== RUN   TestGetStringBySliceOfIndexes/simple_get_random_index_order
+=== RUN   TestDeleteByIndex/index_unreachable
+=== PAUSE TestGetStringBySliceOfIndexes/simple_get_random_index_order
+=== PAUSE TestGetCharByIndex/simple_get
+=== RUN   TestIsComplexEqual/exactly_equal
+=== PAUSE TestReverseSliceTwo/simple_tests
+=== RUN   TestShiftPointer/pointer_is_nil
+=== RUN   TestReverseSliceTwo/immutability_check
+=== PAUSE TestIsSliceEqual/nil_slices
+=== PAUSE TestDeleteByIndex/index_unreachable
+=== RUN   TestIsSliceEqual/nil_and_empty_slices
+=== PAUSE TestShiftPointer/pointer_is_nil
+=== RUN   TestGetCharByIndex/chinese_symbols
+=== RUN   TestDeleteByIndex/immutability_check
+=== PAUSE TestIsSliceEqual/nil_and_empty_slices
+=== RUN   TestGetStringBySliceOfIndexes/chinese_symbols
+=== RUN   TestIsSliceEqual/empty_and_nil_slices
+=== PAUSE TestIsComplexEqual/exactly_equal
+=== PAUSE TestIsSliceEqual/empty_and_nil_slices
+=== PAUSE TestReverseSliceTwo/immutability_check
+=== RUN   TestIsComplexEqual/pi_equal_with_precision
+=== RUN   TestIsSliceEqual/empty_slice
+=== PAUSE TestIsComplexEqual/pi_equal_with_precision
+=== RUN   TestReverseSliceOne/empty
+=== PAUSE TestDeleteByIndex/immutability_check
+=== PAUSE TestGetCharByIndex/chinese_symbols
+=== PAUSE TestReverseSliceOne/empty
+=== PAUSE TestIsSliceEqual/empty_slice
+=== CONT  TestGetStringBySliceOfIndexesUnreachable
+=== CONT  TestSwapPointers
+=== RUN   TestSwapPointers/simple_test
+=== RUN   TestGetCharByIndex/arabic_symbols
+=== PAUSE TestSwapPointers/simple_test
+=== RUN   TestIsSliceEqual/equal_slices
+=== PAUSE TestGetCharByIndex/arabic_symbols
+=== PAUSE TestGetStringBySliceOfIndexes/chinese_symbols
+=== RUN   TestGetCharByIndex/emoji
+=== CONT  TestCharByIndexUnreachable
+=== PAUSE TestGetCharByIndex/emoji
+=== RUN   TestCharByIndexUnreachable/empty_string
+=== RUN   TestReverseSliceOne/simple_reverse
+=== RUN   TestGetStringBySliceOfIndexesUnreachable/empty_string
+=== PAUSE TestReverseSliceOne/simple_reverse
+=== RUN   TestSwapPointers/nil_pointers
+=== PAUSE TestIsSliceEqual/equal_slices
+=== RUN   TestGetStringBySliceOfIndexes/arabic_symbols
+=== RUN   TestIsComplexEqual/equal_with_precision
+=== CONT  TestSort
+=== PAUSE TestIsComplexEqual/equal_with_precision
+=== RUN   TestSort/random_elements_sort
+=== RUN   TestIsComplexEqual/not_equal
+=== PAUSE TestCharByIndexUnreachable/empty_string
+=== PAUSE TestIsComplexEqual/not_equal
+=== PAUSE TestSort/random_elements_sort
+=== RUN   TestIsComplexEqual/not_equal_low_precision
+=== RUN   TestSort/nil
+=== PAUSE TestSort/nil
+=== RUN   TestCharByIndexUnreachable/index_greater_than_length
+=== RUN   TestReverseSliceOne/odd_size
+=== PAUSE TestCharByIndexUnreachable/index_greater_than_length
+=== PAUSE TestReverseSliceOne/odd_size
+=== RUN   TestCharByIndexUnreachable/negative_index
+=== RUN   TestIsSliceEqual/not_equal_slices
+=== RUN   TestReverseSliceOne/even_size
+=== PAUSE TestCharByIndexUnreachable/negative_index
+=== PAUSE TestIsSliceEqual/not_equal_slices
+=== PAUSE TestReverseSliceOne/even_size
+=== RUN   TestIsSliceEqual/different_length
+=== CONT  TestGetRootsOfQuadraticEquation
+=== PAUSE TestGetStringBySliceOfIndexes/arabic_symbols
+=== RUN   TestGetRootsOfQuadraticEquation/simple
+=== RUN   TestGetStringBySliceOfIndexes/emoji
+=== PAUSE TestGetStringBySliceOfIndexesUnreachable/empty_string
+=== PAUSE TestGetStringBySliceOfIndexes/emoji
+=== RUN   TestGetStringBySliceOfIndexesUnreachable/index_greater_than_length
+=== CONT  TestShiftPointer/pointer_is_nil
+=== PAUSE TestIsComplexEqual/not_equal_low_precision
+=== RUN   TestIsComplexEqual/not_equal_NaN_values
+=== RUN   TestSort/zero_length
+=== PAUSE TestIsComplexEqual/not_equal_NaN_values
+=== RUN   TestSwapPointers/nil_pointers/first_is_nil
+=== RUN   TestIsComplexEqual/equal_Infinity_values
+=== PAUSE TestSwapPointers/nil_pointers/first_is_nil
+=== PAUSE TestIsSliceEqual/different_length
+=== RUN   TestSwapPointers/nil_pointers/second_is_nil
+=== PAUSE TestGetRootsOfQuadraticEquation/simple
+=== CONT  TestReverseSliceTwo/immutability_check
+=== PAUSE TestIsComplexEqual/equal_Infinity_values
+=== RUN   TestGetRootsOfQuadraticEquation/single_root
+=== PAUSE TestSort/zero_length
+=== PAUSE TestSwapPointers/nil_pointers/second_is_nil
+=== PAUSE TestGetStringBySliceOfIndexesUnreachable/index_greater_than_length
+=== RUN   TestSort/one_element
+=== CONT  TestDeleteByIndex/simple_tests
+=== RUN   TestIsComplexEqual/+inf_+inf_real
+=== CONT  TestShiftPointer/simple_test
+=== PAUSE TestIsComplexEqual/+inf_+inf_real
+=== RUN   TestIsComplexEqual/-inf_-inf_real
+=== RUN   TestDeleteByIndex/simple_tests/middle_element
+=== CONT  TestReverseSliceTwo/simple_tests
+=== PAUSE TestGetRootsOfQuadraticEquation/single_root
+=== RUN   TestSwapPointers/nil_pointers/both_are_nils
+=== RUN   TestGetRootsOfQuadraticEquation/complex_roots_integer
+=== PAUSE TestSort/one_element
+=== RUN   TestGetStringBySliceOfIndexesUnreachable/negative_index
+=== PAUSE TestIsComplexEqual/-inf_-inf_real
+=== CONT  TestDeleteByIndex/index_unreachable
+=== RUN   TestDeleteByIndex/index_unreachable/empty_slice
+=== RUN   TestIsComplexEqual/+inf_+inf_imag
+=== PAUSE TestDeleteByIndex/index_unreachable/empty_slice
+=== PAUSE TestIsComplexEqual/+inf_+inf_imag
+=== PAUSE TestDeleteByIndex/simple_tests/middle_element
+=== RUN   TestDeleteByIndex/simple_tests/first_element
+=== PAUSE TestDeleteByIndex/simple_tests/first_element
+=== RUN   TestSort/two_elements
+=== RUN   TestReverseSliceTwo/simple_tests/nil
+=== RUN   TestDeleteByIndex/simple_tests/last_element
+=== PAUSE TestReverseSliceTwo/simple_tests/nil
+=== PAUSE TestSort/two_elements
+=== RUN   TestReverseSliceTwo/simple_tests/empty
+=== RUN   TestSort/four_elements
+=== PAUSE TestSwapPointers/nil_pointers/both_are_nils
+=== PAUSE TestGetRootsOfQuadraticEquation/complex_roots_integer
+=== PAUSE TestSort/four_elements
+=== RUN   TestGetRootsOfQuadraticEquation/complex_roots_floats
+=== RUN   TestDeleteByIndex/index_unreachable/index_grater_than_length
+=== RUN   TestIsComplexEqual/-inf_-inf_imag
+=== PAUSE TestDeleteByIndex/index_unreachable/index_grater_than_length
+=== PAUSE TestDeleteByIndex/simple_tests/last_element
+=== RUN   TestDeleteByIndex/index_unreachable/negative_index
+=== CONT  TestGetCharByIndex/chinese_symbols
+=== PAUSE TestReverseSliceTwo/simple_tests/empty
+=== PAUSE TestGetStringBySliceOfIndexesUnreachable/negative_index
+=== CONT  TestDeleteByIndex/immutability_check
+=== CONT  TestGetCharByIndex/arabic_symbols
+=== CONT  TestGetCharByIndex/simple_get
+=== PAUSE TestGetRootsOfQuadraticEquation/complex_roots_floats
+=== CONT  TestCharByIndexUnreachable/empty_string
+=== CONT  TestReverseSliceOne/nil
+--- PASS: TestShiftPointer (0.00s)
+    --- PASS: TestShiftPointer/pointer_is_nil (0.00s)
+    --- PASS: TestShiftPointer/simple_test (0.00s)
+=== PAUSE TestIsComplexEqual/-inf_-inf_imag
+=== PAUSE TestDeleteByIndex/index_unreachable/negative_index
+=== CONT  TestReverseSliceOne/even_size
+=== RUN   TestIsComplexEqual/+inf_-inf_real
+=== CONT  TestReverseSliceOne/odd_size
+=== PAUSE TestIsComplexEqual/+inf_-inf_real
+=== CONT  TestReverseSliceOne/simple_reverse
+=== CONT  TestReverseSliceOne/empty
+=== RUN   TestIsComplexEqual/+inf_-inf_imag
+=== CONT  TestGetStringBySliceOfIndexes/simple_get
+=== RUN   TestReverseSliceTwo/simple_tests/odd_size
+=== CONT  TestCharByIndexUnreachable/negative_index
+=== PAUSE TestReverseSliceTwo/simple_tests/odd_size
+=== RUN   TestReverseSliceTwo/simple_tests/even_size
+=== CONT  TestGetStringBySliceOfIndexes/arabic_symbols
+=== CONT  TestCharByIndexUnreachable/index_greater_than_length
+=== CONT  TestGetCharByIndex/emoji
+=== CONT  TestGetStringBySliceOfIndexes/emoji
+=== CONT  TestGetStringBySliceOfIndexes/simple_get_random_index_order
+=== CONT  TestGetStringBySliceOfIndexes/chinese_symbols
+=== PAUSE TestReverseSliceTwo/simple_tests/even_size
+=== CONT  TestIsSliceEqual/equal_slices
+=== CONT  TestIsSliceEqual/nil_slices
+--- PASS: TestReverseSliceOne (0.00s)
+    --- PASS: TestReverseSliceOne/nil (0.00s)
+    --- PASS: TestReverseSliceOne/even_size (0.00s)
+    --- PASS: TestReverseSliceOne/odd_size (0.00s)
+    --- PASS: TestReverseSliceOne/simple_reverse (0.00s)
+    --- PASS: TestReverseSliceOne/empty (0.00s)
+=== CONT  TestIsSliceEqual/different_length
+=== CONT  TestIsSliceEqual/not_equal_slices
+=== CONT  TestIsSliceEqual/nil_and_empty_slices
+=== PAUSE TestIsComplexEqual/+inf_-inf_imag
+=== RUN   TestIsComplexEqual/overflow
+--- PASS: TestCharByIndexUnreachable (0.00s)
+    --- PASS: TestCharByIndexUnreachable/empty_string (0.00s)
+    --- PASS: TestCharByIndexUnreachable/negative_index (0.00s)
+    --- PASS: TestCharByIndexUnreachable/index_greater_than_length (0.00s)
+=== CONT  TestSwapPointers/nil_pointers/both_are_nils
+=== PAUSE TestIsComplexEqual/overflow
+--- PASS: TestGetCharByIndex (0.00s)
+    --- PASS: TestGetCharByIndex/chinese_symbols (0.00s)
+    --- PASS: TestGetCharByIndex/arabic_symbols (0.00s)
+    --- PASS: TestGetCharByIndex/simple_get (0.00s)
+    --- PASS: TestGetCharByIndex/emoji (0.00s)
+=== RUN   TestIsComplexEqual/+inf_+inf_real_false
+=== CONT  TestSwapPointers/nil_pointers/first_is_nil
+--- PASS: TestGetStringBySliceOfIndexes (0.00s)
+    --- PASS: TestGetStringBySliceOfIndexes/simple_get_random_index_order (0.00s)
+    --- PASS: TestGetStringBySliceOfIndexes/emoji (0.00s)
+    --- PASS: TestGetStringBySliceOfIndexes/simple_get (0.00s)
+    --- PASS: TestGetStringBySliceOfIndexes/arabic_symbols (0.00s)
+    --- PASS: TestGetStringBySliceOfIndexes/chinese_symbols (0.00s)
+=== CONT  TestIsSliceEqual/empty_and_nil_slices
+=== PAUSE TestIsComplexEqual/+inf_+inf_real_false
+=== CONT  TestSort/two_elements
+=== CONT  TestIsSliceEqual/empty_slice
+=== CONT  TestSwapPointers/nil_pointers/second_is_nil
+=== CONT  TestDeleteByIndex/simple_tests/last_element
+--- PASS: TestIsSliceEqual (0.00s)
+    --- PASS: TestIsSliceEqual/nil_slices (0.00s)
+    --- PASS: TestIsSliceEqual/not_equal_slices (0.00s)
+    --- PASS: TestIsSliceEqual/equal_slices (0.00s)
+    --- PASS: TestIsSliceEqual/different_length (0.00s)
+    --- PASS: TestIsSliceEqual/nil_and_empty_slices (0.00s)
+    --- PASS: TestIsSliceEqual/empty_and_nil_slices (0.00s)
+    --- PASS: TestIsSliceEqual/empty_slice (0.00s)
+=== CONT  TestSort/four_elements
+=== CONT  TestDeleteByIndex/simple_tests/first_element
+=== CONT  TestSort/random_elements_sort
+=== CONT  TestGetStringBySliceOfIndexesUnreachable/empty_string
+=== CONT  TestGetStringBySliceOfIndexesUnreachable/negative_index
+=== CONT  TestSort/nil
+=== CONT  TestGetRootsOfQuadraticEquation/single_root
+=== RUN   TestIsComplexEqual/+inf_+inf_imag_false
+=== CONT  TestSort/one_element
+=== CONT  TestDeleteByIndex/simple_tests/middle_element
+=== CONT  TestSort/zero_length
+=== CONT  TestGetStringBySliceOfIndexesUnreachable/index_greater_than_length
+=== CONT  TestGetRootsOfQuadraticEquation/complex_roots_integer
+=== CONT  TestGetRootsOfQuadraticEquation/complex_roots_floats
+=== PAUSE TestIsComplexEqual/+inf_+inf_imag_false
+=== CONT  TestDeleteByIndex/index_unreachable/index_grater_than_length
+=== CONT  TestDeleteByIndex/index_unreachable/empty_slice
+--- PASS: TestGetStringBySliceOfIndexesUnreachable (0.00s)
+    --- PASS: TestGetStringBySliceOfIndexesUnreachable/negative_index (0.00s)
+    --- PASS: TestGetStringBySliceOfIndexesUnreachable/empty_string (0.00s)
+    --- PASS: TestGetStringBySliceOfIndexesUnreachable/index_greater_than_length (0.00s)
+=== CONT  TestDeleteByIndex/index_unreachable/negative_index
+=== CONT  TestReverseSliceTwo/simple_tests/odd_size
+=== CONT  TestReverseSliceTwo/simple_tests/nil
+=== CONT  TestReverseSliceTwo/simple_tests/even_size
+=== CONT  TestReverseSliceTwo/simple_tests/empty
+=== CONT  TestIsComplexEqual/exactly_equal
+=== CONT  TestIsComplexEqual/+inf_+inf_imag_false
+=== CONT  TestIsComplexEqual/+inf_+inf_real
+--- PASS: TestReverseSliceTwo (0.00s)
+    --- PASS: TestReverseSliceTwo/immutability_check (0.00s)
+    --- PASS: TestReverseSliceTwo/simple_tests (0.00s)
+        --- PASS: TestReverseSliceTwo/simple_tests/odd_size (0.00s)
+        --- PASS: TestReverseSliceTwo/simple_tests/nil (0.00s)
+        --- PASS: TestReverseSliceTwo/simple_tests/even_size (0.00s)
+        --- PASS: TestReverseSliceTwo/simple_tests/empty (0.00s)
+=== CONT  TestIsComplexEqual/overflow
+=== CONT  TestIsComplexEqual/+inf_-inf_imag
+=== CONT  TestIsComplexEqual/-inf_-inf_imag
+=== CONT  TestIsComplexEqual/+inf_-inf_real
+=== CONT  TestIsComplexEqual/+inf_+inf_real_false
+=== CONT  TestIsComplexEqual/-inf_-inf_real
+=== CONT  TestIsComplexEqual/not_equal_low_precision
+--- PASS: TestDeleteByIndex (0.00s)
+    --- PASS: TestDeleteByIndex/immutability_check (0.00s)
+    --- PASS: TestDeleteByIndex/simple_tests (0.00s)
+        --- PASS: TestDeleteByIndex/simple_tests/last_element (0.00s)
+        --- PASS: TestDeleteByIndex/simple_tests/first_element (0.00s)
+        --- PASS: TestDeleteByIndex/simple_tests/middle_element (0.00s)
+    --- PASS: TestDeleteByIndex/index_unreachable (0.00s)
+        --- PASS: TestDeleteByIndex/index_unreachable/empty_slice (0.00s)
+        --- PASS: TestDeleteByIndex/index_unreachable/index_grater_than_length (0.00s)
+        --- PASS: TestDeleteByIndex/index_unreachable/negative_index (0.00s)
+=== CONT  TestIsComplexEqual/+inf_+inf_imag
+=== CONT  TestIsComplexEqual/not_equal_NaN_values
+=== CONT  TestIsComplexEqual/not_equal
+=== CONT  TestGetRootsOfQuadraticEquation/simple
+=== CONT  TestIsComplexEqual/equal_with_precision
+=== CONT  TestIsComplexEqual/equal_Infinity_values
+=== CONT  TestIsComplexEqual/pi_equal_with_precision
+=== CONT  TestSwapPointers/simple_test
+--- PASS: TestGetRootsOfQuadraticEquation (0.00s)
+    --- PASS: TestGetRootsOfQuadraticEquation/single_root (0.00s)
+    --- PASS: TestGetRootsOfQuadraticEquation/complex_roots_integer (0.00s)
+    --- PASS: TestGetRootsOfQuadraticEquation/complex_roots_floats (0.00s)
+    --- PASS: TestGetRootsOfQuadraticEquation/simple (0.00s)
+--- PASS: TestSwapPointers (0.00s)
+    --- PASS: TestSwapPointers/nil_pointers (0.00s)
+        --- PASS: TestSwapPointers/nil_pointers/both_are_nils (0.00s)
+        --- PASS: TestSwapPointers/nil_pointers/first_is_nil (0.00s)
+        --- PASS: TestSwapPointers/nil_pointers/second_is_nil (0.00s)
+    --- PASS: TestSwapPointers/simple_test (0.00s)
+--- PASS: TestIsComplexEqual (0.00s)
+    --- PASS: TestIsComplexEqual/exactly_equal (0.00s)
+    --- PASS: TestIsComplexEqual/+inf_+inf_imag_false (0.00s)
+    --- PASS: TestIsComplexEqual/+inf_+inf_real (0.00s)
+    --- PASS: TestIsComplexEqual/overflow (0.00s)
+    --- PASS: TestIsComplexEqual/-inf_-inf_imag (0.00s)
+    --- PASS: TestIsComplexEqual/+inf_+inf_real_false (0.00s)
+    --- PASS: TestIsComplexEqual/-inf_-inf_real (0.00s)
+    --- PASS: TestIsComplexEqual/+inf_-inf_imag (0.00s)
+    --- PASS: TestIsComplexEqual/+inf_-inf_real (0.00s)
+    --- PASS: TestIsComplexEqual/not_equal_low_precision (0.00s)
+    --- PASS: TestIsComplexEqual/+inf_+inf_imag (0.00s)
+    --- PASS: TestIsComplexEqual/not_equal_NaN_values (0.00s)
+    --- PASS: TestIsComplexEqual/not_equal (0.00s)
+    --- PASS: TestIsComplexEqual/equal_with_precision (0.00s)
+    --- PASS: TestIsComplexEqual/equal_Infinity_values (0.00s)
+    --- PASS: TestIsComplexEqual/pi_equal_with_precision (0.00s)
+--- PASS: TestSort (0.00s)
+    --- PASS: TestSort/two_elements (0.00s)
+    --- PASS: TestSort/four_elements (0.00s)
+    --- PASS: TestSort/nil (0.00s)
+    --- PASS: TestSort/one_element (0.00s)
+    --- PASS: TestSort/zero_length (0.00s)
+    --- PASS: TestSort/random_elements_sort (2.27s)
+PASS
+ok  	godigest	22.589s

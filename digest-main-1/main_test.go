@@ -3,7 +3,7 @@ package go_digest
 import (
 	"math"
 	"math/cmplx"
-	"math/rand/v2"
+	rand "math/rand/v2"
 	"slices"
 	"strings"
 	"testing"

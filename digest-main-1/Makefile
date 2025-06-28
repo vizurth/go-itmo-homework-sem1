@@ -47,8 +47,6 @@ endif
 	git checkout main
 	git pull --all
 	# Обновляем hw
-	git checkout hw
-	git pull --all
 	git rebase main
 	git push -f
 	@echo 'Successfully updated'
